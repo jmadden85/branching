@@ -108,9 +108,28 @@ textarea {
     url('../fonts/nexa_light-webfont.ttf') format('truetype');
 }
 
+.wrapper {
+    width:1024px;
+    margin:0 auto;
+}
+
 h1, h3, .action {
     font-family:nexaBold;
     text-transform:uppercase;
+}
+
+header {
+    width:1024px;
+    text-align:center;
+    background:#fff799;
+    border-radius:0 0 15px 15px;
+    color:#666;
+    padding:15px 0;
+}
+
+header h1 {
+    margin:0;
+    font-size:28px;
 }
 
 

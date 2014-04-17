@@ -1,4 +1,4 @@
 branching
 =========
 
-A git branching model shown through canvas
+A git branching model shown through animations

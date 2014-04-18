@@ -108,6 +108,10 @@ textarea {
     url('../fonts/nexa_light-webfont.ttf') format('truetype');
 }
 
+html {
+    border-top:7px solid #959595;
+}
+
 .wrapper {
     width:1024px;
     margin:0 auto;
@@ -125,15 +129,69 @@ header {
     border-radius:0 0 15px 15px;
     color:#666;
     padding:15px 0;
+    position:relative;
 }
 
 header h1 {
     margin:0;
     font-size:28px;
+    font-weight:normal;
 }
 
+img {
+    position:absolute;
+    top:5px;
+    right:165px;
+}
 
+.static, .temp {
+    height:140px;
+    width:140px;
+    background:#0072bc;
+    border-radius:70px;
+}
 
+.temp {
+    background:#00bff3;
+    border:dotted #0072bc;
+}
+
+.branch {
+    float:left;
+    margin:0 13px;
+}
+
+.branch h3, .branch p {
+    font-family:nexaLight;
+    color:#fff;
+    font-size:16px;
+    text-align:center;
+    font-weight:normal;
+    letter-spacing:1px;
+}
+
+.branch p {
+    margin:0 0 0 0;
+}
+
+.static h3 {
+    margin:53px 0 0 0;
+}
+
+.temp h3 {
+    margin:35px 0 0 0;
+    line-height:1.1;
+}
+
+.arrow, .gitMethod {
+    background-image:url('../img/sprite.png');
+    background-repeat:no-repeat;
+}
+
+.big.left {
+    height:300px;
+    background-position:0 -218px;
+}
 
 
 

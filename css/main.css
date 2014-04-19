@@ -230,7 +230,21 @@ img {
     right:59px;
 }
 
+.arrow.tiny {
+  height: 55px;
+  width: 127px;
+  background-position: 0 -218px;
+}
 
+.arrow.tiny.left.down {
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+
+.arrow.tiny.right.down {
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
 
 
 

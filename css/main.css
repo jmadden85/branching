@@ -163,15 +163,24 @@ img {
 
 .branch {
     float:left;
-    margin:0 18px;
+    display:none;
+    /*margin:0 18px;*/
 }
 
-.production {
-    margin: 0 0 0 18px;
+.branchContainer {
+    width:138px;
+    height:138px;
+    /*float:left;*/
+    margin:0 16px;
+    display:inline-block;
 }
 
-.feature {
-    margin:0 18px 0 0;
+.branchContainer.last {
+    margin: 0 0 0 16px;
+}
+
+.branchContainer.first {
+    margin:0 16px 0 0;
 }
 
 .branch h3, .branch p {
@@ -196,16 +205,25 @@ img {
     line-height:1.1;
 }
 
+.arrowContainer {
+    margin:15px 0 0 0;
+    height:260px;
+}
+
+.arrowContainer.low {
+    height:235px;
+}
+
 .arrow, .gitMethod {
     background-image:url('../img/sprite.png');
     background-repeat:no-repeat;
     background-color:rgba(0, 0, 0, 0);
+    display:none;
 }
 
 .big.left {
     height:260px;
     background-position:76px -270px;
-    margin:15px 0 0;
 }
 
 .medium.right {
@@ -215,10 +233,11 @@ img {
 
 .medium.left {
     height:170px;
-    width:600px;
-    background-position:58px -812px;
+    width:526px;
+    background-position:0 -812px;
     position: absolute;
     bottom:60px;
+    left:56px;
 }
 
 .small.right {
@@ -231,19 +250,165 @@ img {
 }
 
 .arrow.tiny {
-  height: 55px;
-  width: 127px;
-  background-position: 0 -218px;
+    height: 55px;
+    width: 127px;
+    background-position: 0 -218px;
+    position:absolute;
+}
+
+.arrow.tiny.up.branchBug {
+    left:440px;
+    top:200px;
+}
+
+.arrow.tiny.up.branchHotfix {
+    right:110px;
+    top:200px;
 }
 
 .arrow.tiny.left.down {
-  -webkit-transform:rotate(180deg);
-  transform:rotate(180deg);
+    -webkit-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+    bottom:180px;
 }
 
 .arrow.tiny.right.down {
-  -webkit-transform:rotate(180deg);
-  transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    bottom:180px;
+}
+
+.arrow.mergeFeature {
+    left:85px;
+}
+
+.arrow.mergeBug {
+    left:270px;
+}
+
+.arrow.pullBug {
+    left:430px;
+    z-index:200;
+}
+
+.arrow.pullFeature {
+
+}
+
+.arrow.mergeQAFeature {
+
+}
+
+.arrow.mergeHotfixProd {
+    right:115px;
+}
+
+.arrow.mergeHotfixQA {
+    right:272px;
+}
+
+.arrow.mergeTagProd {
+}
+
+.tiny.down.right .container {
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+.tiny.down.left .container {
+    -webkit-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+}
+
+.container {
+    position: absolute;
+    z-index:100;
+}
+
+.git {
+    width:100px;
+    background-image:url('../img/sprite.png');
+    height:45px;
+    margin:0;
+    float:none;
+}
+
+.arrow p {
+    text-transform:uppercase;
+    font-family:nexaLight;
+    width:175px;
+    margin:0;
+}
+
+.git.branch {
+    display:block;
+    background-position:40px -160px;
+}
+
+.git.merge {
+    background-position:14px -105px;
+}
+
+.git.pull {
+    background-position:52px -53px;
+}
+
+.arrow.big.left .container {
+    left:450px;
+}
+
+.branchBug .container, .branchHotfix .container {
+    top:-45px;
+}
+
+.pullFeature .container {
+    bottom:-40px;
+    left:270px;
+}
+
+.mergeQAFeature .container {
+    bottom:-34px;
+    left:150px;
+}
+
+.mergeFeature .container {
+    bottom:26px;
+    left:-83px;
+}
+
+.mergeBug .container {
+    bottom:26px;
+    left:20px;
+}
+
+.pullBug .container {
+    bottom:26px;
+    left:-30px;
+}
+
+.mergeTagProd .container .merge {
+    background-position:0 -105px;
+    margin:0 0 0 33px;
+}
+
+.mergeTagProd .container div {
+    display:inline-block;
+    width:42px;
+}
+
+.mergeTagProd .container {
+    bottom:-30px;
+    right:82px;
+}
+
+.mergeHotfixQA .container {
+    bottom:26px;
+    left:37px;
+}
+
+.mergeHotfixProd .container {
+    bottom:26px;
+    left:-78px;
 }
 
 

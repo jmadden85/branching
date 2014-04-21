@@ -26,14 +26,22 @@
     var staticBranches = [devBranch, qaBranch, prodBranch];
 
     var walkthrough = {
-        cycle: function (timer, elements) {
+        cycle: function (timer, elements, steps) {
             var timeIncrement = timer;
             var l = elements.length;
             var current = 0;
             (function callback () {
                 var thisEl = elements[current];
+                var thisStep = $('.' + steps + ' [data-num="' + current + '"]');
                 wait(timeIncrement).then(function () {
-                    thisEl.show();
+                    if (thisEl.length > 1) {
+                        for (var i = 0; i < thisEl.length; i++) {
+                            thisEl[i].show();
+                        }
+                    } else {
+                        thisEl.show();
+                    }
+                    thisStep.show();
                 });
                 timeIncrement += timer;
                 current++;
@@ -44,7 +52,7 @@
         },
         feature: function () {
             this.cycle(0, staticBranches);
-            this.cycle(5000, [newFeatureArrow, featureBranch, mergeQAToFeature, mergeFeature, pullFeature, mergeAndTag])
+            this.cycle(5000, [[newFeatureArrow, featureBranch], mergeQAToFeature, mergeFeature, pullFeature, mergeAndTag], 'feature')
         },
         bug: function () {
 
@@ -56,7 +64,4 @@
 
     walkthrough.feature();
 
-//    wait(5000).then(function () {
-//        alert('fired');
-//    });
 })();

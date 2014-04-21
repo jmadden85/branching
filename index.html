@@ -139,6 +139,26 @@
                     </div>
                 </div>
             </section>
+            <ol class="feature">
+                <li data-num="0">
+                    <p>Create a new feature branch from production, including the ticket name.</p>
+                    <p>git checkout -b feature/TICKET-NUMBER production</p>
+                </li>
+                <li data-num="1">
+                    <p>After completing the feature, merge QA into your feature branch.</p>
+                    <p>git checkout feature/TICKET-NUMBER</p>
+                    <p>git merge qa</p>
+                </li>
+                <li data-num="2">
+                    <p>Confirm there are no conflicts and merge your feature into development.</p>
+                    <p>git checkout development</p>
+                    <p>git merge feature/TICKET-NUMBER</p>
+                </li>
+                <li data-num="3">
+                    <p>After you have confirmed there are no conflicts on dev, submit a pull request for your feature
+                    into QA.</p>
+                </li>
+            </ol>
         </section>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
